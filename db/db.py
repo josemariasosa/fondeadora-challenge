@@ -11,7 +11,7 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 SAMPLE_DATASET = [
-    'vehicle', 'user', 'location', 'service', 'arrival', 'departure'
+    'vehicle', 'customer', 'location', 'reservation', 'rent'
 ]
 
 

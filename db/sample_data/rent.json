@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "reservationId": 1,
+        "vehicleId": 1,
+        "customerId": 3,
+        "isCompleted": true,
+        "deparetureAt": "2020-01-02 09:20:00",
+        "deparetureLocationId": 1,
+        "arrivedAt": "2020-01-03 06:40:00",
+        "arrivedLocationId": 1
+    },
+    {
+        "id": 2,
+        "reservationId": 4,
+        "vehicleId": 4,
+        "customerId": 2,
+        "isCompleted": true,
+        "deparetureAt": "2020-01-06 08:50:00",
+        "deparetureLocationId": 2,
+        "arrivedAt": "2020-01-10 20:04:00",
+        "arrivedLocationId": 2
+    },
+    {
+        "id": 3,
+        "reservationId": 5,
+        "vehicleId": 5,
+        "customerId": 4,
+        "isCompleted": false,
+        "deparetureAt": "2020-01-20 08:35:00",
+        "deparetureLocationId": 3,
+        "arrivedAt": null,
+        "arrivedLocationId": null
+    },
+    {
+        "id": 4,
+        "reservationId": 6,
+        "vehicleId": 6,
+        "customerId": 1,
+        "isCompleted": true,
+        "deparetureAt": "2020-01-06 10:10:00",
+        "deparetureLocationId": 3,
+        "arrivedAt": "2020-01-11 09:15:00",
+        "arrivedLocationId": 3
+    },
+    {
+        "id": 5,
+        "reservationId": 7,
+        "vehicleId": 2,
+        "customerId": 5,
+        "isCompleted": true,
+        "deparetureAt": "2020-01-08 06:50:00",
+        "deparetureLocationId": 2,
+        "arrivedAt": "2020-01-09 12:00:00",
+        "arrivedLocationId": 2
+    }
+]
