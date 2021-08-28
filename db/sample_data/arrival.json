@@ -40,5 +40,12 @@
         "locationId": 3,
         "createdAt": "2020-01-04 09:24:11",
         "totalKm": 122938
+    },
+    {
+        "id": 7,
+        "serviceId": 7,
+        "locationId": 1,
+        "createdAt": "2020-01-09 09:24:11",
+        "totalKm": 43124
     }
 ]

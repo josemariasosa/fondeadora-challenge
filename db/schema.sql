@@ -33,12 +33,8 @@ CREATE TABLE service (
     status TEXT NOT NULL,
     createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     type TEXT NOT NULL,
-    bookedDays INTEGER,
-    bookedForDate DATE,
-    bookedForLocationId INTEGER, 
     FOREIGN KEY (vehicleId) REFERENCES vehicle (id),
-    FOREIGN KEY (userId) REFERENCES user (id),
-    FOREIGN KEY (bookedForLocationId) REFERENCES location (id)
+    FOREIGN KEY (userId) REFERENCES user (id)
 );
 
 CREATE TABLE departure (

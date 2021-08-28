@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
+import os
 import json
 import sqlite3
 import configparser
@@ -28,9 +29,9 @@ def build_schema(cursor: Cursor) -> None:
         
 
 def insert_records(cursor: Cursor) -> None:
-    sample_data_dir = config['sqlite3']['sample_data_dir']
+    data_dir = config['sqlite3']['sample_data_dir']
     for dataset in SAMPLE_DATASET:
-        with open(f'{sample_data_dir}{dataset}.json', 'r') as ds:
+        with open(os.path.join(data_dir, f'{dataset}.json'), 'r') as ds:
             records = json.load(ds)
         if len(records) > 0:
             columns = records[0].keys()
