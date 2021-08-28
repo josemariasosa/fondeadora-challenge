@@ -46,13 +46,13 @@ CREATE TABLE rent (
     vehicleId INTEGER NOT NULL,
     customerId INTEGER NOT NULL,
     isCompleted BOOL NOT NULL,
-    deparetureAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    deparetureLocationId INTEGER NOT NULL,
+    departureAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    departureLocationId INTEGER NOT NULL,
     arrivedAt TIMESTAMP,
     arrivedLocationId INTEGER,
     FOREIGN KEY (reservationId) REFERENCES reservation (id),
     FOREIGN KEY (vehicleId) REFERENCES vehicle (id),
     FOREIGN KEY (customerId) REFERENCES customer (id),
-    FOREIGN KEY (deparetureLocationId) REFERENCES location (id),
+    FOREIGN KEY (departureLocationId) REFERENCES location (id),
     FOREIGN KEY (arrivedLocationId) REFERENCES location (id)
 );

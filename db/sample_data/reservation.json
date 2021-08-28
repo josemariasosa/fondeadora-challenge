@@ -75,5 +75,38 @@
         "bookedDepartureDatetime": "2020-01-08 06:00:00",
         "bookedDepartureLocationId": 2,
         "bookedArrivedLocationId": 2
+    },
+    {
+        "id": 8,
+        "vehicleId": 1,
+        "customerId": 3,
+        "status": "confirmed",
+        "createdAt": "2020-01-07 19:27:11",
+        "bookedTotalDays": 7,
+        "bookedDepartureDatetime": "2020-01-08 06:40:00",
+        "bookedDepartureLocationId": 1,
+        "bookedArrivedLocationId": 1
+    },
+    {
+        "id": 9,
+        "vehicleId": 1,
+        "customerId": 1,
+        "status": "confirmed",
+        "createdAt": "2020-01-09 19:27:11",
+        "bookedTotalDays": 1,
+        "bookedDepartureDatetime": "2020-01-16 06:00:00",
+        "bookedDepartureLocationId": 1,
+        "bookedArrivedLocationId": 3
+    },
+    {
+        "id": 10,
+        "vehicleId": 3,
+        "customerId": 3,
+        "status": "confirmed",
+        "createdAt": "2020-01-10 06:27:11",
+        "bookedTotalDays": 2,
+        "bookedDepartureDatetime": "2020-01-16 06:00:00",
+        "bookedDepartureLocationId": 1,
+        "bookedArrivedLocationId": 3
     }
 ]

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
+import os
 import json
 import sqlite3
 import configparser
@@ -10,7 +11,7 @@ from sqlite3 import Connection, Cursor
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-SAMPLE_DATASET = [
+SAMPLE_DATASETS = [
     'vehicle', 'customer', 'location', 'reservation', 'rent'
 ]
 
@@ -28,9 +29,9 @@ def build_schema(cursor: Cursor) -> None:
         
 
 def insert_records(cursor: Cursor) -> None:
-    sample_data_dir = config['sqlite3']['sample_data_dir']
-    for dataset in SAMPLE_DATASET:
-        with open(f'{sample_data_dir}{dataset}.json', 'r') as ds:
+    data_dir = config['sqlite3']['sample_data_dir']
+    for dataset in SAMPLE_DATASETS:
+        with open(os.path.join(data_dir, f'{dataset}.json'), 'r') as ds:
             records = json.load(ds)
         if len(records) > 0:
             columns = records[0].keys()
@@ -64,7 +65,7 @@ def test() -> None:
     assert bool(conn), 'Connection unavailable!'
     
     cursor = conn.cursor()
-    for dataset in SAMPLE_DATASET:
+    for dataset in SAMPLE_DATASETS:
         result = cursor.execute(
             f"SELECT name FROM sqlite_master WHERE type='table' AND name='{dataset}';"
         ).fetchall()
