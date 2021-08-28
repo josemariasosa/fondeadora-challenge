@@ -5,7 +5,7 @@ import json
 import sqlite3
 import configparser
 
-from sqlite3 import Error, Connection, Cursor
+from sqlite3 import Connection, Cursor
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -54,7 +54,6 @@ def init_db() -> None:
         insert_records(cursor)
 
         conn.commit()
-
         cursor.close()
         conn.close()
         print('Initialized the database.')
@@ -62,11 +61,9 @@ def init_db() -> None:
 
 def test() -> None:
     conn = connect_db()
-
     assert bool(conn), 'Connection unavailable!'
     
     cursor = conn.cursor()
-
     for dataset in SAMPLE_DATASET:
         result = cursor.execute(
             f"SELECT name FROM sqlite_master WHERE type='table' AND name='{dataset}';"
@@ -79,6 +76,4 @@ def test() -> None:
         assert len(result) > 0, f'Values not inserted to Table {dataset}'
 
     conn.close()
-
     print('All database tests passed.')
-

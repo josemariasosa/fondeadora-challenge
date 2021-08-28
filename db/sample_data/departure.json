@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": 1,
+        "serviceId": 7,
+        "locationId": 1,
+        "createdAt": "2020-01-06 19:24:11",
+        "totalKm": 40124
+    }
+]

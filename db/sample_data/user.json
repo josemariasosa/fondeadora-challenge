@@ -1,37 +1,37 @@
 [
     {
-	"id": 1,
-    	"name": "Jose Maria Sosa",
-	"email": "jose_skedar@hotmail.com",
-	"dateOfBirth": "1988-05-21",
-	"type": "customer"
+        "id": 1,
+        "name": "Jose Maria Sosa",
+        "email": "jose_skedar@hotmail.com",
+        "dateOfBirth": "1988-05-21",
+        "type": "customer"
     },
     {
-	"id": 2,
-    	"name": "Leonardo Ulloa",
-	"email": "leo_ulloa@hotmail.com",
-	"dateOfBirth": "1987-05-21",
-	"type": "customer"
+        "id": 2,
+        "name": "Leonardo Ulloa",
+        "email": "leo_ulloa@hotmail.com",
+        "dateOfBirth": "1987-05-21",
+        "type": "customer"
     },
     {
-	"id": 3,
-    	"name": "Mechanic 1",
-	"email": "mec1@carrent.com",
-	"dateOfBirth": "1987-05-21",
-	"type": "internal"
+        "id": 3,
+        "name": "Mechanic 1",
+        "email": "mec1@carrent.com",
+        "dateOfBirth": "1987-05-21",
+        "type": "internal"
     },
     {
-	"id": 4,
-    	"name": "Mechanic 2",
-	"email": "mec2@carrent.com",
-	"dateOfBirth": "1987-05-21",
-	"type": "internal"
+        "id": 4,
+        "name": "Mechanic 2",
+        "email": "mec2@carrent.com",
+        "dateOfBirth": "1987-05-21",
+        "type": "internal"
     },
     {
-	"id": 5,
-    	"name": "Alexa Clark",
-	"email": "alexa_clark@gmail.com",
-	"dateOfBirth": "1991-06-20",
-	"type": "customer"
+        "id": 5,
+        "name": "Alexa Clark",
+        "email": "alexa_clark@gmail.com",
+        "dateOfBirth": "1991-06-20",
+        "type": "customer"
     }
 ]
