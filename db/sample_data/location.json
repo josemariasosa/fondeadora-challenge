@@ -1,11 +1,14 @@
 [
     {
-    	"name": "Guadalajara"
+    	"name": "Guadalajara",
+	"id": 1
     },
     {
-    	"name": "CDMX"
+    	"name": "CDMX",
+	"id": 2
     },
     {
-    	"name": "Toluca"
+    	"name": "Toluca",
+	"id": 3
     }
 ]
