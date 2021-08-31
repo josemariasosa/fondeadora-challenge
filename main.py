@@ -6,10 +6,20 @@ from report import report
 
 
 def main():
-    # db.init_db()
-    # db.test()
+    db.init_db()
+    db.test()
 
-    report_1 = report.get_total_reservations()
+    print('\n ------------------ Reports: ------------------\n')
+
+    report_1 = report.get_total_reservations(date_from="2020-01-01",
+                                             date_to="2020-01-31")
+    print('Report 1: Total confirmed and pending reservations, total rents and average time per rent (in secs).')
+    print(report_1, '\n')
+
+
+    report_2 = report.get_vehicle_current_location()
+    print('Report 2: Vehicle current location.')
+    print(report_2, '\n')
 
 
 if __name__ == '__main__':

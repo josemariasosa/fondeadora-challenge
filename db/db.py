@@ -19,6 +19,7 @@ SAMPLE_DATASETS = [
 def connect_db() -> Connection:
     db_file = config['sqlite3']['db_file']
     conn = sqlite3.connect(db_file)
+    conn.row_factory = sqlite3.Row
     return conn
 
 
@@ -47,22 +48,20 @@ def insert_records(cursor: Cursor) -> None:
 
 def init_db() -> None:
     conn = connect_db()
+    cursor = conn.cursor()
 
-    if conn:
-        cursor = conn.cursor()
+    build_schema(cursor)
+    insert_records(cursor)
 
-        build_schema(cursor)
-        insert_records(cursor)
-
-        conn.commit()
-        cursor.close()
-        conn.close()
-        print('Initialized the database.')
+    conn.commit()
+    cursor.close()
+    conn.close()
+    print('Initialized the database.')
 
 
 def test() -> None:
     conn = connect_db()
-    assert bool(conn), 'Connection unavailable!'
+    assert isinstance(conn, Connection), 'Connection unavailable!'
     
     cursor = conn.cursor()
     for dataset in SAMPLE_DATASETS:

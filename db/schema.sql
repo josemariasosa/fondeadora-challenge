@@ -7,20 +7,20 @@ DROP TABLE IF EXISTS rent;
 CREATE TABLE vehicle (
     id INTEGER PRIMARY KEY UNIQUE,
     year INTEGER NOT NULL,
-    make TEXT NOT NULL,
-    model TEXT NOT NULL,
-    motor TEXT NOT NULL
+    make VARCHAR NOT NULL,
+    model VARCHAR NOT NULL,
+    motor VARCHAR NOT NULL
 );
 
 CREATE TABLE location (
     id INTEGER PRIMARY KEY UNIQUE,
-    name TEXT NOT NULL
+    name VARCHAR NOT NULL
 );
 
 CREATE TABLE customer (
     id INTEGER PRIMARY KEY UNIQUE,
-    email TEXT UNIQUE NOT NULL,
-    name TEXT NOT NULL,
+    email VARCHAR UNIQUE NOT NULL,
+    name VARCHAR NOT NULL,
     dateOfBirth DATE NOT NULL
 );
 
@@ -28,7 +28,7 @@ CREATE TABLE reservation (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     vehicleId INTEGER NOT NULL,
     customerId INTEGER NOT NULL,
-    status TEXT NOT NULL,
+    status VARCHAR NOT NULL,
     createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     bookedTotalDays INTEGER,
     bookedDepartureDatetime DATETIME,

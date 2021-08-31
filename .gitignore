@@ -131,3 +131,5 @@ dmypy.json
 # db
 db/car_rent.db
 
+# mac
+.DS_Store
